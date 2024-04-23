@@ -1,6 +1,7 @@
 import React from 'react'
 import '../App.css'
 import { useNavigate } from 'react-router';
+import PostList from '../components/Post';
 
 const Home = () => {
   const userData = JSON.parse(localStorage.getItem('userData'));
@@ -26,6 +27,9 @@ const Home = () => {
       <button className='logout' onClick={handleLogout}>Logout</button>
     </div>
    </nav>
+   <main>
+      <PostList/>
+   </main>
    </>
   )
 }
