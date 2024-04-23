@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import axios from '../utils/axios'
 import { useNavigate } from 'react-router'
+import { Link } from 'react-router-dom'
 
 const Login = () => {
 
@@ -19,7 +20,7 @@ const Login = () => {
     const handleSubmit = async (e) => {
         e.preventDefault()
         try{
-            const response =  await axios.post('/login',formData)
+            const response =  await axios.post('auth/login',formData)
             localStorage.setItem('tokens', response.data.tokens)
             localStorage.setItem('userData', JSON.stringify(response.data.user)); // Menyimpan seluruh data respons
             console.log(response.data.user);
@@ -40,7 +41,7 @@ const Login = () => {
             <label>Password</label>
             <input type='password' name='password' value={formData.password} onChange={handleChange}/>
             <button type='submit'>Login</button>
-            <h1>{}</h1>
+            <Link to={'/register'}>don't have a account? register now!</Link>
        </form>
  </>
   )
