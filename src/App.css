@@ -2,6 +2,7 @@ nav{
     background-color: steelblue;
     display: flex;
     justify-content: space-between;
+    padding: 1rem;
    align-items: center;
 }
 
@@ -9,4 +10,14 @@ nav{
     padding: 0;
     margin: 0;
     box-sizing: border-box;
+}
+
+.menu{
+    display: flex;
+   gap: 10px;
+}
+
+.logout{
+    border: none;
+    background: none;
 }
