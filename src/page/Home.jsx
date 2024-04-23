@@ -1,5 +1,5 @@
 import React from 'react'
-
+import '../App.css'
 
 const Home = () => {
   const userData = JSON.parse(localStorage.getItem('userData'));
